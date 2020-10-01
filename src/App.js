@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import DefaultLayout from './containers'
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fas,fab);
 
 const LoginPage = () => {
   return (
@@ -24,6 +27,7 @@ const NotFoundPage = () => {
 }
 
 function App() {
+  
   return (
    
     <BrowserRouter>

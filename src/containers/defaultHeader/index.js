@@ -9,7 +9,7 @@ export default function defaultHeader() {
                 <ul>
                     <li><NavLink to="/dashboard" activeClassName="active">Home</NavLink></li>
                     <li><NavLink to="/works" activeClassName="active">My Works</NavLink></li>
-                    <li class="btn-login"><NavLink to="/login" activeClassName="active">Contact</NavLink></li>
+                    <li className="btn-login"><NavLink to="/login" activeClassName="active">Contact</NavLink></li>
                 </ul>
             </nav>
         </header>
