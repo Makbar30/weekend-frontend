@@ -1,0 +1,71 @@
+.works {
+  width: 100%;
+  padding: 50px 0px;
+
+  .container {
+    width: 80%;
+    margin: auto;
+
+    .card-row {
+      display: flex;
+      gap: 50px;
+      margin-bottom: 50px;
+
+      &__desc {
+        flex: 1;
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+
+        h3,
+        p {
+          margin: 10px 0px;
+        }
+        button {
+          padding: 10px 30px;
+          border-radius: 10px;
+          margin: 10px 0px;
+          width: fit-content;
+          cursor: pointer;
+          background: white;
+          border: 2px solid black;
+          outline: none;
+          text-transform: uppercase;
+          text-align: left!important;
+        }
+
+        .btn {
+          background-position: center;
+          transition: background 0.8s;
+        }
+
+        .btn:hover {
+          background: black radial-gradient(circle, transparent 1%, black 1%)
+            center/15000%;
+          color: white;
+        }
+
+        .btn:active {
+          background-color: rgb(165, 165, 165);
+          background-size: 100%;
+          border-radius: 10px;
+          transition: background 0s;
+          color: white;
+        }
+      }
+
+      &__image {
+        flex: 2;
+        img {
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+
+    .card-row:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+}
