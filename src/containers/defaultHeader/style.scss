@@ -80,3 +80,9 @@
     text-transform: uppercase;
   }
 }
+
+@media screen and (max-width: 960px) {
+  .header ul{
+    flex: 1;
+  }
+}

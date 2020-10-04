@@ -6,18 +6,20 @@ import HomePage from '../pages/Home'
 import WorksPage from '../pages/Portofolio'
 
 function DefaultLayout() {
-    
-    return (
-      <BrowserRouter>
-       <Header/>
+
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Header />
         <Switch>
-          <Route path="/dashboard" name="Main Page" component={HomePage}/>
-          <Route path="/works" name="My Works Page" component={WorksPage}/>
+          <Route path="/dashboard" name="Main Page" component={HomePage} />
+          <Route path="/works" name="My Works Page" component={WorksPage} />
           <Redirect from="/" to="/dashboard" />
         </Switch>
-        <Footer/>
-      </BrowserRouter>
-    );
-  }
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
+}
 
 export default DefaultLayout;

@@ -8,7 +8,7 @@ export default function defaultHeader() {
                 <ul>
                     <li><NavLink to="/dashboard" activeClassName="active">Home</NavLink></li>
                     <li><NavLink to="/works" activeClassName="active">My Works</NavLink></li>
-                    <li><NavLink to="/contact" className="btn-contact" activeClassName="btn-active">Contact</NavLink></li>
+                    {/* <li><NavLink to="/contact" className="btn-contact" activeClassName="btn-active">Contact</NavLink></li> */}
                 </ul>
             </nav>
         </header>

@@ -1,6 +1,6 @@
 .works {
   width: 100%;
-  padding: 50px 0px;
+  padding: 20px 0px;
 
   .container {
     width: 80%;
@@ -32,7 +32,7 @@
           border: 2px solid black;
           outline: none;
           text-transform: uppercase;
-          text-align: left!important;
+          text-align: left !important;
         }
 
         .btn {
@@ -66,6 +66,19 @@
 
     .card-row:nth-child(odd) {
       flex-direction: row-reverse;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .works > .container {
+    .card-row {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    .card-row:nth-child(odd) {
+      flex-direction: column-reverse;
     }
   }
 }
