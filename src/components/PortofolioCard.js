@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button'
 
 const PortofolioCard = props => {
 
@@ -10,7 +9,7 @@ const PortofolioCard = props => {
                 <div className="card-row__desc">
                     <h3>{objPortofolio.title}</h3>
                     <p>{objPortofolio.desc}</p>
-                    <Button>Take a look</Button>
+                    <a className="btn" href={objPortofolio.url} target="_blank" without rel="noopener noreferrer">Take a look</a>
                 </div>
                 <div className="card-row__image">
                     <img src={`/assets/images/${objPortofolio.image}`} alt="Portofolio"/>

@@ -9,7 +9,6 @@ function DefaultLayout() {
 
   return (
     <BrowserRouter>
-      <div className="App">
         <Header />
         <Switch>
           <Route path="/dashboard" name="Main Page" component={HomePage} />
@@ -17,7 +16,6 @@ function DefaultLayout() {
           <Redirect from="/" to="/dashboard" />
         </Switch>
         <Footer />
-      </div>
     </BrowserRouter>
   );
 }

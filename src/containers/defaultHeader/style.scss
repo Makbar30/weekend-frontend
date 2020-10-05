@@ -1,6 +1,5 @@
 .header {
   background: transparent;
-
   nav {
     width: 80%;
     display: flex;
@@ -84,5 +83,11 @@
 @media screen and (max-width: 960px) {
   .header ul{
     flex: 1;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .header ul{
+    padding: 0;
   }
 }
