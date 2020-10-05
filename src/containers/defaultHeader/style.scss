@@ -1,5 +1,8 @@
 .header {
-  background: transparent;
+  background: white;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
   nav {
     width: 80%;
     display: flex;
@@ -7,13 +10,21 @@
     justify-content: space-between;
     align-items: center;
   }
-  ul {
+  .nav-hide {
+    right: 50px !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-menu {
     display: flex;
     flex-wrap: wrap;
     flex: 0.5;
     justify-content: space-evenly;
     align-items: center;
-
+    right: 0;
+    position: relative;
+    transition: all 0.4s;
     li {
       list-style-type: none;
       position: relative;
@@ -53,41 +64,80 @@
         background-position: center;
         transition: background 0.8s;
       }
-  
-      .btn-contact::after{
-        width: 0!important;
+
+      .btn-contact::after {
+        width: 0 !important;
       }
-  
+
       .btn-contact:hover {
         background: black radial-gradient(circle, transparent 1%, black 1%)
           center/15000%;
         color: white;
       }
-  
+
       .btn-contact:active {
         background-color: rgb(165, 165, 165);
         background-size: 100%;
         transition: background 0s;
       }
     }
-
-    
   }
   h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex: 0.2;
     text-transform: uppercase;
   }
+  button {
+    outline: none;
+    background: black;
+    background-position: center;
+    transition: background 0.8s;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 960px) {
-  .header ul{
+  .header.nav-menu {
     flex: 1;
   }
 }
 
-@media screen and (max-width: 340px) {
-  .header ul{
-    padding: 0;
+@media screen and (max-width: 460px) {
+  .header {
+    .nav-hide {
+      right: 0px !important;
+      top: -100px !important;
+      opacity: 0;
+      visibility: hidden;
+      // transition: all 0.5s ease;
+    }
+
+    .nav-menu {
+      // box-shadow: 0 0 4px #999;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 10vh;
+      background: white;
+      gap: 20px;
+      position: absolute;
+      justify-content: flex-start;
+      padding: 0;
+      top: 50px;
+      opacity: 1;
+      // transition: all 0.6s ease;
+      li {
+        margin-left: 0;
+        .active::after,
+        a:hover::after {
+          width: 0;
+        }
+      }
+    }
   }
 }
