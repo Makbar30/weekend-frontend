@@ -111,10 +111,10 @@
   .header {
     .nav-hide {
       right: 0px !important;
-      top: -100px !important;
-      opacity: 0;
-      visibility: hidden;
-      // transition: all 0.5s ease;
+      top: 50px !important;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.5s ease;
     }
 
     .nav-menu {
@@ -128,9 +128,9 @@
       position: absolute;
       justify-content: flex-start;
       padding: 0;
-      top: 50px;
+      top: -100px;
       opacity: 1;
-      // transition: all 0.6s ease;
+      transition: all 0.6s ease;
       li {
         margin-left: 0;
         .active::after,
