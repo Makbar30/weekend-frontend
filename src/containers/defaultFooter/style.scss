@@ -13,12 +13,10 @@
       padding: 20px;
 
       a {
-        svg {
-          color: black;
-          cursor: pointer;
-          width: 30px!important;
-          height: auto;
-        }
+        -webkit-tap-highlight-color: transparent;
+        font-size: 30px!important;
+        cursor: pointer;
+        color: black;
       } 
     }
   }
