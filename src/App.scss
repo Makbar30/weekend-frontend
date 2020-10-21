@@ -1,5 +1,192 @@
-.App {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+.container {
+  height: auto;
+  background: $primary-background-color;
+
+  &__header, &__footer{
+    padding: 17px 24px;
+  }
+  &__header {
+    display: flex;
+    background: $header-background-color;
+  }
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 24px 20px 23px;
+    min-height: 600px;
+    max-height: 665px;
+    background: url("/assets/images/bg-1.png") center center no-repeat;
+    background-blend-mode: multiply;
+    position: relative;
+  }
+
+  &__definition{
+    height: 648px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 32px;
+    position: relative;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: $footer-background-color;
+  }
+}
+
+.header-logo {
+  margin-right: 13px;
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+}
+
+.container__header p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.container__header h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.container__hero h1 {
+  margin: 0;
+  margin-top: auto;
+  font-size: 45px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.98;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+}
+
+.container__hero p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
+}
+
+.hero-img {
+  width: 184px;
+  height: 305px;
+  align-self: center;
+  margin-top: auto;
+  position: relative;
+}
+
+.img-button {
+  width: 231px;
+  height: 58px;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  border-radius: 29px;
+  box-shadow: 0 20px 30px 0 rgba(249, 131, 171, 0.5);
+  background-color: white;
+  outline: none;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+  top: 200px;
+}
+
+.def-img{
+  width: 159px;
+  height: 158px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.def-text{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.57px;
+  text-align: right;
+  color: black;
+
+  strong{
+    font-weight: 900;
+    color: $footer-background-color;
+  }
+}
+
+.def-author{
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: white;
+}
+
+.def-oval{
+  width: 89px;
+  height: 89px;
+  position: absolute;
+  bottom: 93px;
+  left: 57px;
+}
+
+.copyright{
+  margin: 0;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+}
+
+.version{
+  padding: 4px 9px;
+  border-radius: 9px;
+  border: solid 1px white;
+  font-size: 10px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: white;
 }
