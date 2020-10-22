@@ -31,6 +31,13 @@
     position: relative;
   }
 
+  &__content{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    position: relative;
+  }
+
   &__footer {
     display: flex;
     flex-direction: row;
@@ -134,7 +141,7 @@
 .def-text{
   margin: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.5;
@@ -165,6 +172,126 @@
   position: absolute;
   bottom: 93px;
   left: 57px;
+}
+
+.main-content{
+  margin-top: -125px;
+}
+
+
+.content-item{
+  padding: 0px 32px;
+  margin-bottom: 67px;
+}
+
+.slider{
+  padding: 0px 0px 0px 32px;
+}
+
+.content-item h1{
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: white;
+}
+
+.content-item p{
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.57px;
+  color: white;
+}
+
+.slick-list{
+  padding:0 20% 0 0!important;
+}
+
+.testi-card{
+  width: 207px;
+  height: 100px;
+  box-shadow: 0 -10px 20px 0 rgba(249, 131, 171, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+
+.testi-card h1{
+  margin: 0;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: black;
+}
+
+.testi-card p{
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.43px;
+  color: black;
+}
+
+.ht-card{
+  width: 311px;
+  height: 176px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.ht-img{
+  width: 100%;
+  height: 100%;
+}
+
+.ht-desc{
+  display: flex;
+  position: absolute;
+  background: rgba(black, 0.5);
+  // opacity: 0.5;
+  bottom: 0;
+}
+
+.ht-desc p{
+  margin: 0;
+  padding: 17px 25px;
+  flex-basis: 80%;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.57px;
+  color: white;
+}
+
+.ht-desc img{
+  width: 32px;
+  height: 32px;
+  padding: 20px;
+  flex-basis: 20%;
+}
+
+.content-footer{
+  width: 253px;
+  height: 337px;
 }
 
 .copyright{

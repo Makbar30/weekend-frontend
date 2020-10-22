@@ -1,4 +1,66 @@
 import React from 'react';
+import { HtCard, TestiCard } from './components/'
+import Slider from "react-slick";
+
+const testiObj = [
+  {
+    "id": "dv2o78l11m",
+    "testimony": "I couldn't have asked for more than this. I wish I would have thought of it first. This is simply unbelievable!",
+    "by": "Arron"
+  },
+  {
+    "id": "903lf1itgt",
+    "testimony": "Wow what great service, I love it! Without WEEKEND, we would have gone by now. You guys rock!",
+    "by": "Kelsey"
+  },
+  {
+    "id": "nj645u5e4a",
+    "testimony": "I wish I would have thought of it first.",
+    "by": "Steven"
+  },
+  {
+    "id": "4rjtcb1wh0",
+    "testimony": "Fantastic, I'm totally blown away by WEEKEND",
+    "by": "Charley"
+  },
+  {
+    "id": "qvt7jp8p3d",
+    "testimony": "This is unbelievable. After using WEEKEND my business skyrocketed!",
+    "by": "Vanessa"
+  }
+]
+
+const helpObj = [
+  {
+    "id": "dbh6fghjgj",
+    "title": "Start quickly with simple steps",
+    "slug": "start-quickly-with-simple-steps",
+    "image": "https://wknd-take-home-challenge-api.herokuapp.com/dbh6fghjgj.jpg"
+  },
+  {
+    "id": "lgmd6ielxi",
+    "title": "Run smoothly at vero eos et accusamus",
+    "slug": "run-smoothly-at-vero-eos-et-accusamus",
+    "image": "https://wknd-take-home-challenge-api.herokuapp.com/lgmd6ielxi.jpg"
+  },
+  {
+    "id": "qlrl8c8xqg",
+    "title": "Denounce with righteous indignation",
+    "slug": "denounce-with-righteous-indignation",
+    "image": "https://wknd-take-home-challenge-api.herokuapp.com/qlrl8c8xqg.jpg"
+  }
+]
+
+const sliderSettings = {
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: '45px',
+};
 
 function App() {
 
@@ -42,6 +104,44 @@ function App() {
         <p className="def-author">-weekend team</p>
         <img src="assets/images/oval.svg"
           className="def-oval" alt="def-oval" />
+      </div>
+
+      <div className="container__content">
+        <div className="main-content">
+          <div className="content-item slider">
+            <h1 className="item-title">Testimonial</h1>
+            <Slider {...sliderSettings}>
+              {testiObj.map(value => (
+                <TestiCard key={value.id} testiObj={value} />
+              ))}
+            </Slider>
+          </div>
+          <div className="content-item">
+            <h1 className="item-title">POV</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+          </div>
+          <div className="content-item">
+            <h1 className="item-title">Resource</h1>
+            <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best</p>
+          </div>
+          <div className="content-item">
+            <h1 className="item-title">Help &amp; Tips</h1>
+            <div className="ht-list">
+              {helpObj.map(value => (
+                <HtCard key={value.id} helpObj={value} />
+              ))}
+            </div>
+          </div>
+          <div className="content-item">
+            <h1 className="item-title">You’re all set.</h1>
+            <p>The wise man therefore always holds in these matters to this principle of selection.</p>
+          </div>
+        </div>
+        <img src="assets/images/group-3.png"
+          srcset="assets/images/group-3@2x.png 2x,
+             assets/images/group-3@3x.png 3x"
+          className="content-footer"
+          alt="content-footer"/>
       </div>
 
       <footer className="container__footer">
