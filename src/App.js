@@ -58,8 +58,46 @@ const sliderSettings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: '45px',
+  responsive: [
+    {
+      breakpoint: 1441,
+      settings: {
+        infinite: false,
+        slidesToShow: 2.4,
+        arrows: true,
+        // centerMode: true,
+        // centerPadding: '65px',
+      }
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        infinite: false,
+        slidesToShow: 1.8,
+        arrows: true
+      }
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        infinite: false,
+        slidesToShow: 1,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '68px',
+      }
+    },
+    {
+      breakpoint: 376,
+      settings: {
+        infinite: false,
+        slidesToShow: 1,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '42px',
+      }
+    }
+  ]
 };
 
 function App() {
@@ -118,13 +156,13 @@ function App() {
           </div>
           <div className="content-item">
             <h1 className="item-title">POV</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+            <p className="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
           </div>
           <div className="content-item">
             <h1 className="item-title">Resource</h1>
-            <p>These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best</p>
+            <p className="item-desc">These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best</p>
           </div>
-          <div className="content-item">
+          <div className="content-item help">
             <h1 className="item-title">Help &amp; Tips</h1>
             <div className="ht-list">
               {helpObj.map(value => (
@@ -132,16 +170,16 @@ function App() {
               ))}
             </div>
           </div>
-          <div className="content-item">
+          <div className="content-item set">
             <h1 className="item-title">You’re all set.</h1>
-            <p>The wise man therefore always holds in these matters to this principle of selection.</p>
+            <p className="item-desc">The wise man therefore always holds in these matters to this principle of selection.</p>
           </div>
         </div>
         <img src="assets/images/group-3.png"
           srcset="assets/images/group-3@2x.png 2x,
              assets/images/group-3@3x.png 3x"
           className="content-footer"
-          alt="content-footer"/>
+          alt="content-footer" />
       </div>
 
       <footer className="container__footer">
