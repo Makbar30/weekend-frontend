@@ -1,5 +1,5 @@
 import React from 'react';
-import { HtCard, TestiCard } from './components/'
+import { HtCard, TestiCard, VisibilitySensor } from './components/'
 import Slider from "react-slick";
 
 const testiObj = [
@@ -60,13 +60,19 @@ const sliderSettings = {
   slidesToScroll: 1,
   responsive: [
     {
+      breakpoint: 1920,
+      settings: {
+        infinite: false,
+        slidesToShow: 2.6,
+        arrows: true,
+      }
+    },
+    {
       breakpoint: 1441,
       settings: {
         infinite: false,
         slidesToShow: 2.4,
         arrows: true,
-        // centerMode: true,
-        // centerPadding: '65px',
       }
     },
     {
@@ -96,11 +102,22 @@ const sliderSettings = {
         centerMode: true,
         centerPadding: '42px',
       }
+    },
+    {
+      breakpoint: 321,
+      settings: {
+        infinite: false,
+        slidesToShow: 1,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '15px',
+      }
     }
   ]
 };
 
 function App() {
+  console.log(window.innerWidth)
 
   return (
     <div className="container">
@@ -146,37 +163,57 @@ function App() {
 
       <div className="container__content">
         <div className="main-content">
-          <div className="content-item slider">
-            <h1 className="item-title">Testimonial</h1>
-            <Slider {...sliderSettings}>
-              {testiObj.map(value => (
-                <TestiCard key={value.id} testiObj={value} />
-              ))}
-            </Slider>
-          </div>
-          <div className="content-item">
-            <h1 className="item-title">POV</h1>
-            <p className="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-          </div>
-          <div className="content-item">
-            <h1 className="item-title">Resource</h1>
-            <p className="item-desc">These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best</p>
-          </div>
-          <div className="content-item help">
-            <h1 className="item-title">Help &amp; Tips</h1>
-            <div className="ht-list">
-              {helpObj.map(value => (
-                <HtCard key={value.id} helpObj={value} />
-              ))}
-            </div>
-          </div>
-          <div className="content-item set">
-            <h1 className="item-title">You’re all set.</h1>
-            <p className="item-desc">The wise man therefore always holds in these matters to this principle of selection.</p>
-          </div>
+          <VisibilitySensor once>
+            {({ isVisible }) => (
+              <div className={isVisible ? "content-item slider slideUp enter" : "content-item slider slideUp"}>
+                <h1 className="item-title">Testimonial</h1>
+                <Slider {...sliderSettings}>
+                  {testiObj.map(value => (
+                    <TestiCard key={value.id} testiObj={value} />
+                  ))}
+                </Slider>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once>
+            {({ isVisible }) => (
+              <div className={isVisible ? "content-item slideUp enter" : "content-item slideUp"}>
+                <h1 className="item-title">POV</h1>
+                <p className="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once>
+            {({ isVisible }) => (
+              <div className={isVisible ? "content-item slideUp enter" : "content-item slideUp"}>
+                <h1 className="item-title">Resource</h1>
+                <p className="item-desc">These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best</p>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once>
+            {({ isVisible }) => (
+              <div className={isVisible ? "content-item help slideUp enter" : "content-item help slideUp"}>
+                <h1 className="item-title">Help &amp; Tips</h1>
+                <div className="ht-list">
+                  {helpObj.map(value => (
+                    <HtCard key={value.id} helpObj={value} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once>
+            {({ isVisible }) => (
+              <div className={isVisible ? "content-item set slideUp enter" : "content-item set slideUp"}>
+                <h1 className="item-title">You’re all set.</h1>
+                <p className="item-desc">The wise man therefore always holds in these matters to this principle of selection.</p>
+              </div>
+            )}
+          </VisibilitySensor>
         </div>
         <img src="assets/images/group-3.png"
-          srcset="assets/images/group-3@2x.png 2x,
+          srcSet="assets/images/group-3@2x.png 2x,
              assets/images/group-3@3x.png 3x"
           className="content-footer"
           alt="content-footer" />
