@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weekend-frontend/static/css/main.4210bc0d.chunk.css",
+    "main.css": "/weekend-frontend/static/css/main.cbb6ddc8.chunk.css",
     "main.js": "/weekend-frontend/static/js/main.8d3165ab.chunk.js",
     "main.js.map": "/weekend-frontend/static/js/main.8d3165ab.chunk.js.map",
     "runtime-main.js": "/weekend-frontend/static/js/runtime-main.7f255250.js",
@@ -9,10 +9,10 @@
     "static/js/2.494617a1.chunk.js": "/weekend-frontend/static/js/2.494617a1.chunk.js",
     "static/js/2.494617a1.chunk.js.map": "/weekend-frontend/static/js/2.494617a1.chunk.js.map",
     "index.html": "/weekend-frontend/index.html",
-    "precache-manifest.0c4697211624cdc1f591fdaa7dd9f30b.js": "/weekend-frontend/precache-manifest.0c4697211624cdc1f591fdaa7dd9f30b.js",
+    "precache-manifest.4fd62ff02010fc11a2cfbba8cbde61c2.js": "/weekend-frontend/precache-manifest.4fd62ff02010fc11a2cfbba8cbde61c2.js",
     "service-worker.js": "/weekend-frontend/service-worker.js",
     "static/css/2.e8cb318b.chunk.css.map": "/weekend-frontend/static/css/2.e8cb318b.chunk.css.map",
-    "static/css/main.4210bc0d.chunk.css.map": "/weekend-frontend/static/css/main.4210bc0d.chunk.css.map",
+    "static/css/main.cbb6ddc8.chunk.css.map": "/weekend-frontend/static/css/main.cbb6ddc8.chunk.css.map",
     "static/js/2.494617a1.chunk.js.LICENSE.txt": "/weekend-frontend/static/js/2.494617a1.chunk.js.LICENSE.txt",
     "static/media/slick-theme.css": "/weekend-frontend/static/media/slick.f97e3bbf.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.7f255250.js",
     "static/css/2.e8cb318b.chunk.css",
     "static/js/2.494617a1.chunk.js",
-    "static/css/main.4210bc0d.chunk.css",
+    "static/css/main.cbb6ddc8.chunk.css",
     "static/js/main.8d3165ab.chunk.js"
   ]
 }
