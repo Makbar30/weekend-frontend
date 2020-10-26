@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a39b6a66fc867055b5f7ffb99310c8b",
+    "revision": "77647c78ee865e9c751e2f6ac6511c98",
     "url": "/weekend-frontend/index.html"
   },
   {
-    "revision": "0e821fce28147b014d0c",
+    "revision": "25b28d69baa7cd9920b3",
     "url": "/weekend-frontend/static/css/2.e8cb318b.chunk.css"
   },
   {
-    "revision": "f556d6817438c169e80f",
+    "revision": "aeb6ae11553cc2de0821",
     "url": "/weekend-frontend/static/css/main.cdd5bb30.chunk.css"
   },
   {
-    "revision": "0e821fce28147b014d0c",
-    "url": "/weekend-frontend/static/js/2.ce6f5830.chunk.js"
+    "revision": "25b28d69baa7cd9920b3",
+    "url": "/weekend-frontend/static/js/2.dd6a1101.chunk.js"
   },
   {
     "revision": "8a137f586fcebb1a370343eb47b7677c",
-    "url": "/weekend-frontend/static/js/2.ce6f5830.chunk.js.LICENSE.txt"
+    "url": "/weekend-frontend/static/js/2.dd6a1101.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f556d6817438c169e80f",
-    "url": "/weekend-frontend/static/js/main.4f83bdd1.chunk.js"
+    "revision": "aeb6ae11553cc2de0821",
+    "url": "/weekend-frontend/static/js/main.bbbdb8ef.chunk.js"
   },
   {
     "revision": "a76075f69736cc70d993",

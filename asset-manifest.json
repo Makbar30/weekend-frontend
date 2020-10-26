@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/weekend-frontend/static/css/main.cdd5bb30.chunk.css",
-    "main.js": "/weekend-frontend/static/js/main.4f83bdd1.chunk.js",
-    "main.js.map": "/weekend-frontend/static/js/main.4f83bdd1.chunk.js.map",
+    "main.js": "/weekend-frontend/static/js/main.bbbdb8ef.chunk.js",
+    "main.js.map": "/weekend-frontend/static/js/main.bbbdb8ef.chunk.js.map",
     "runtime-main.js": "/weekend-frontend/static/js/runtime-main.7f255250.js",
     "runtime-main.js.map": "/weekend-frontend/static/js/runtime-main.7f255250.js.map",
     "static/css/2.e8cb318b.chunk.css": "/weekend-frontend/static/css/2.e8cb318b.chunk.css",
-    "static/js/2.ce6f5830.chunk.js": "/weekend-frontend/static/js/2.ce6f5830.chunk.js",
-    "static/js/2.ce6f5830.chunk.js.map": "/weekend-frontend/static/js/2.ce6f5830.chunk.js.map",
+    "static/js/2.dd6a1101.chunk.js": "/weekend-frontend/static/js/2.dd6a1101.chunk.js",
+    "static/js/2.dd6a1101.chunk.js.map": "/weekend-frontend/static/js/2.dd6a1101.chunk.js.map",
     "index.html": "/weekend-frontend/index.html",
-    "precache-manifest.599d8ff5be50172401fa6e68232781e6.js": "/weekend-frontend/precache-manifest.599d8ff5be50172401fa6e68232781e6.js",
+    "precache-manifest.9752c1e9bed306bdf2e1b74d4bb62c7e.js": "/weekend-frontend/precache-manifest.9752c1e9bed306bdf2e1b74d4bb62c7e.js",
     "service-worker.js": "/weekend-frontend/service-worker.js",
     "static/css/2.e8cb318b.chunk.css.map": "/weekend-frontend/static/css/2.e8cb318b.chunk.css.map",
     "static/css/main.cdd5bb30.chunk.css.map": "/weekend-frontend/static/css/main.cdd5bb30.chunk.css.map",
-    "static/js/2.ce6f5830.chunk.js.LICENSE.txt": "/weekend-frontend/static/js/2.ce6f5830.chunk.js.LICENSE.txt",
+    "static/js/2.dd6a1101.chunk.js.LICENSE.txt": "/weekend-frontend/static/js/2.dd6a1101.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/weekend-frontend/static/media/prev.7fdb36c6.svg",
     "static/media/bitmap.png": "/weekend-frontend/static/media/bitmap.95e7125d.png",
     "static/media/bitmap@2x.png": "/weekend-frontend/static/media/bitmap@2x.c213813a.png",
@@ -31,8 +31,8 @@
   "entrypoints": [
     "static/js/runtime-main.7f255250.js",
     "static/css/2.e8cb318b.chunk.css",
-    "static/js/2.ce6f5830.chunk.js",
+    "static/js/2.dd6a1101.chunk.js",
     "static/css/main.cdd5bb30.chunk.css",
-    "static/js/main.4f83bdd1.chunk.js"
+    "static/js/main.bbbdb8ef.chunk.js"
   ]
 }
