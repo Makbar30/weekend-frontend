@@ -19,7 +19,7 @@
     padding: 0px 24px 20px 23px;
     min-height: 600px;
     max-height: 665px;
-    background: url("/assets/images/bg-1.png") center center no-repeat;
+    background: url("./images/bg-1.png") center center no-repeat;
     position: relative;
   }
 
@@ -90,6 +90,10 @@
   align-self: center;
   margin-top: auto;
   position: relative;
+
+  img{
+    width: 100%;
+  }
 }
 
 .container__hero button {
@@ -140,7 +144,7 @@
 }
 
 .def-author {
-  @include font-type(16px, 600, italic normal, normal);
+  @include font-type(16px, 600, italic, normal, normal);
   color: white;
 }
 
@@ -182,9 +186,6 @@
   @include font-type(16px, normal, normal, 1.5, -0.57px);
 }
 
-.slick-list {
-  padding: 0 20% 0 0 !important;
-}
 
 .slick-next,
 .slick-prev {
@@ -193,7 +194,7 @@
 }
 
 .slick-next {
-  background: url("/assets/images/oval-icon.svg") center center no-repeat !important;
+  background: url("./images/oval-icon.svg") center center no-repeat !important;
   right: -60px !important;
   &::before {
     display: none;
@@ -201,7 +202,7 @@
 }
 
 .slick-prev {
-  background: url("/assets/images/prev.svg") center center no-repeat !important;
+  background: url("./images/prev.svg") center center no-repeat !important;
   left: -80px !important;
   &::before {
     display: none;

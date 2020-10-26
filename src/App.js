@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { HtCard, TestiCard, VisibilitySensor } from './components/'
 import Slider from "react-slick";
+import logoHeader from './images/bitmap_2.png'
+import logoHeader2 from './images/bitmap_2@2x.png'
+import logoHeader3 from './images/bitmap_2@3x.png'
+import heroImage from './images/bitmap.png'
+import heroImage2 from './images/bitmap@2x.png'
+import heroImage3 from './images/bitmap@3x.png'
+import defImage from './images/group-4.png'
+import defImage2 from './images/group-4@2x.png'
+import defImage3 from './images/group-4@3x.png'
+import defOval from './images/oval.svg'
+import contentFooter from './images/group-3.png'
+import contentFooter2 from './images/group-3@2x.png'
+import contentFooter3 from './images/group-3@3x.png'
+
+
 
 const testiObj = [
   {
@@ -51,80 +66,88 @@ const helpObj = [
   }
 ]
 
-const sliderSettings = {
-  dots: false,
-  arrows: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1920,
-      settings: {
-        infinite: false,
-        slidesToShow: 2.6,
-        arrows: true,
-      }
-    },
-    {
-      breakpoint: 1441,
-      settings: {
-        infinite: false,
-        slidesToShow: 2.4,
-        arrows: true,
-      }
-    },
-    {
-      breakpoint: 1025,
-      settings: {
-        infinite: false,
-        slidesToShow: 1.8,
-        arrows: true
-      }
-    },
-    {
-      breakpoint: 426,
-      settings: {
-        infinite: false,
-        slidesToShow: 1,
-        arrows: false,
-        centerMode: true,
-        centerPadding: '68px',
-      }
-    },
-    {
-      breakpoint: 376,
-      settings: {
-        infinite: false,
-        slidesToShow: 1,
-        arrows: false,
-        centerMode: true,
-        centerPadding: '42px',
-      }
-    },
-    {
-      breakpoint: 321,
-      settings: {
-        infinite: false,
-        slidesToShow: 1,
-        arrows: false,
-        centerMode: true,
-        centerPadding: '15px',
-      }
+const useContainerDimensions = myRef => {
+  const getDimensions = useCallback(() => ({
+    width: myRef.current.offsetWidth - 32,
+    height: myRef.current.offsetHeight
+  }),[myRef])
+
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions(getDimensions())
     }
-  ]
+
+    if (myRef.current) {
+      setDimensions(getDimensions())
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [myRef, getDimensions])
+
+  return dimensions;
 };
 
 function App() {
-  console.log(window.innerWidth)
+  const componentRef = useRef()
+  const { width } = useContainerDimensions(componentRef)
+  const slideSize = (width / 247)
+  const sliderSettings = {
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: slideSize.toFixed(2) - 0.05,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          infinite: false,
+          arrows: true,
+        }
+      },
+      {
+        breakpoint: 1441,
+        settings: {
+          infinite: false,
+          arrows: true,
+        }
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          infinite: false,
+          arrows: true
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          infinite: false,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          infinite: false,
+          arrows: false,
+        }
+      }
+    ]
+  };
 
   return (
     <div className="container">
       <header className="container__header">
-        <img src="assets/images/bitmap_2.png"
-          srcSet="assets/images/bitmap_2@2x.png 2x,
-             assets/images/bitmap_2@3x.png 3x"
+        <img src={logoHeader}
+          srcSet={`${logoHeader2}, ${logoHeader3}`}
           className="header-logo"
           alt="logo" />
 
@@ -138,9 +161,8 @@ function App() {
         <h1>WEEKEND FROM HOME</h1>
         <p>Stay active with a little workout.</p>
         <div className="hero-img">
-          <img src="assets/images/bitmap.png"
-            srcSet="assets/images/bitmap@2x.png 2x,
-             assets/images/bitmap@3x.png 3x"
+          <img src={heroImage}
+            srcSet={`${heroImage2}, ${heroImage3}`}
             alt="hero-img" />
 
           <button className="img-button">Let's Go</button>
@@ -149,15 +171,14 @@ function App() {
       </div>
 
       <div className="container__definition">
-        <img src="assets/images/group-4.png"
-          srcSet="assets/images/group-4@2x.png 2x,
-             assets/images/group-4@3x.png 3x"
+        <img src={defImage}
+          srcSet={`${defImage2}, ${defImage3}`}
           className="def-img"
           alt="def-img" />
 
         <p className="def-text"><strong>Deffinition;</strong> a practice or exercise to test or improve one's fitness for athletic competition, ability, or performance to exhaust (something, such as a mine) by working to devise, arrange, or achieve by resolving difficulties. Merriam-Webster.com Dictionary.</p>
         <p className="def-author">-weekend team</p>
-        <img src="assets/images/oval.svg"
+        <img src={defOval}
           className="def-oval" alt="def-oval" />
       </div>
 
@@ -165,7 +186,7 @@ function App() {
         <div className="main-content">
           <VisibilitySensor once>
             {({ isVisible }) => (
-              <div className={isVisible ? "content-item slider fadeIn enter" : "content-item slider fadeIn"}>
+              <div ref={componentRef} className={isVisible ? "content-item slider fadeIn enter" : "content-item slider fadeIn"}>
                 <h1 className="item-title">Testimonial</h1>
                 <Slider {...sliderSettings}>
                   {testiObj.map(value => (
@@ -191,7 +212,7 @@ function App() {
               </div>
             )}
           </VisibilitySensor>
-          <VisibilitySensor once>
+          <VisibilitySensor once partialVisibility>
             {({ isVisible }) => (
               <div className={isVisible ? "content-item help fadeIn enter" : "content-item help fadeIn"}>
                 <h1 className="item-title">Help &amp; Tips</h1>
@@ -212,9 +233,8 @@ function App() {
             )}
           </VisibilitySensor>
         </div>
-        <img src="assets/images/group-3.png"
-          srcSet="assets/images/group-3@2x.png 2x,
-             assets/images/group-3@3x.png 3x"
+        <img src={contentFooter}
+          srcSet={`${contentFooter2}, ${contentFooter3}`}
           className="content-footer"
           alt="content-footer" />
       </div>
