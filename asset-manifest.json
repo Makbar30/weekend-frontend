@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/weekend-frontend/static/css/main.392da396.chunk.css",
-    "main.js": "/weekend-frontend/static/js/main.90fd247b.chunk.js",
-    "main.js.map": "/weekend-frontend/static/js/main.90fd247b.chunk.js.map",
+    "main.js": "/weekend-frontend/static/js/main.4bbf7077.chunk.js",
+    "main.js.map": "/weekend-frontend/static/js/main.4bbf7077.chunk.js.map",
     "runtime-main.js": "/weekend-frontend/static/js/runtime-main.7f255250.js",
     "runtime-main.js.map": "/weekend-frontend/static/js/runtime-main.7f255250.js.map",
     "static/css/2.e8cb318b.chunk.css": "/weekend-frontend/static/css/2.e8cb318b.chunk.css",
     "static/js/2.494617a1.chunk.js": "/weekend-frontend/static/js/2.494617a1.chunk.js",
     "static/js/2.494617a1.chunk.js.map": "/weekend-frontend/static/js/2.494617a1.chunk.js.map",
     "index.html": "/weekend-frontend/index.html",
-    "precache-manifest.ea887a73e0d3d43d48d13e1df8ec1a97.js": "/weekend-frontend/precache-manifest.ea887a73e0d3d43d48d13e1df8ec1a97.js",
+    "precache-manifest.eeebe5bb4dfcbbb899e28f6704a72dab.js": "/weekend-frontend/precache-manifest.eeebe5bb4dfcbbb899e28f6704a72dab.js",
     "service-worker.js": "/weekend-frontend/service-worker.js",
     "static/css/2.e8cb318b.chunk.css.map": "/weekend-frontend/static/css/2.e8cb318b.chunk.css.map",
     "static/css/main.392da396.chunk.css.map": "/weekend-frontend/static/css/main.392da396.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.e8cb318b.chunk.css",
     "static/js/2.494617a1.chunk.js",
     "static/css/main.392da396.chunk.css",
-    "static/js/main.90fd247b.chunk.js"
+    "static/js/main.4bbf7077.chunk.js"
   ]
 }
