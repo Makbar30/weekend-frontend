@@ -165,7 +165,7 @@ function App() {
         <div className="main-content">
           <VisibilitySensor once>
             {({ isVisible }) => (
-              <div className={isVisible ? "content-item slider slideUp enter" : "content-item slider slideUp"}>
+              <div className={isVisible ? "content-item slider fadeIn enter" : "content-item slider fadeIn"}>
                 <h1 className="item-title">Testimonial</h1>
                 <Slider {...sliderSettings}>
                   {testiObj.map(value => (
@@ -177,7 +177,7 @@ function App() {
           </VisibilitySensor>
           <VisibilitySensor once>
             {({ isVisible }) => (
-              <div className={isVisible ? "content-item slideUp enter" : "content-item slideUp"}>
+              <div className={isVisible ? "content-item fadeIn enter" : "content-item fadeIn"}>
                 <h1 className="item-title">POV</h1>
                 <p className="item-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
               </div>
@@ -185,7 +185,7 @@ function App() {
           </VisibilitySensor>
           <VisibilitySensor once>
             {({ isVisible }) => (
-              <div className={isVisible ? "content-item slideUp enter" : "content-item slideUp"}>
+              <div className={isVisible ? "content-item fadeIn enter" : "content-item fadeIn"}>
                 <h1 className="item-title">Resource</h1>
                 <p className="item-desc">These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best</p>
               </div>
@@ -193,7 +193,7 @@ function App() {
           </VisibilitySensor>
           <VisibilitySensor once>
             {({ isVisible }) => (
-              <div className={isVisible ? "content-item help slideUp enter" : "content-item help slideUp"}>
+              <div className={isVisible ? "content-item help fadeIn enter" : "content-item help fadeIn"}>
                 <h1 className="item-title">Help &amp; Tips</h1>
                 <div className="ht-list">
                   {helpObj.map(value => (
@@ -205,7 +205,7 @@ function App() {
           </VisibilitySensor>
           <VisibilitySensor once>
             {({ isVisible }) => (
-              <div className={isVisible ? "content-item set slideUp enter" : "content-item set slideUp"}>
+              <div className={isVisible ? "content-item set fadeIn enter" : "content-item set fadeIn"}>
                 <h1 className="item-title">You’re all set.</h1>
                 <p className="item-desc">The wise man therefore always holds in these matters to this principle of selection.</p>
               </div>
